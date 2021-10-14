@@ -91,7 +91,7 @@ export default {
         methods: {
 
         handleSubmitForm() {
-            let apiURL = "http://localhost:3000/api/contacto/add";
+            let apiURL = "";
                 this.$refs.observer.validate()
 
         axios

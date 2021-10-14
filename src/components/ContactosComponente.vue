@@ -17,12 +17,11 @@
             </v-row>
 
             <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
-                <v-form @submit.prevent="handleSubmitForm">
+                <form>
                     <v-container bg fill-height>
                     <v-row class=" d-flex">
                         <v-text-field
-                            v-model="nombreUser"
-                            :rules="nameRules"
+                            v-model="contacto.nombreUser"
                             :counter="10"
                             label="Nombres y Apellidos"
                             required
@@ -31,8 +30,7 @@
 
                     <v-row>
                         <v-text-field
-                            v-model="emailUser"
-                            :rules="emailRules"
+                            v-model="contacto.emailUser"
                             label="E-mail"
                             required
                         ></v-text-field>
@@ -40,8 +38,7 @@
 
                     <v-row>
                         <v-text-field
-                            v-model="telefonoUser"
-                            :rules="phoneRules"
+                            v-model="contacto.telefonoUser"
                             :counter="10"
                             label="Teléfono"
                             required
@@ -50,15 +47,14 @@
 
                     <v-row>
                         <v-textarea
-                            v-model="mensajeUser"
-                            :rules="commentRules"
+                            v-model="contacto.mensajeUser"
                             label="Dinos algo que podamos solucionarte"
                             required
                         ></v-textarea>
                     </v-row>
 
                     <v-row justify="center" class="mt-10">
-                        <v-btn
+                        <v-btn @click="submit"
                         class="mr-10  red darken-4 px-10 mb-4"
                         type="submit"
                         >
@@ -69,7 +65,7 @@
                         </v-btn>
                     </v-row>
                     </v-container>
-                </v-form>
+                </form>
             </v-row>
         </v-sheet>
     </v-app>
@@ -81,23 +77,25 @@
 <script>
 import axios from "axios";
 export default {
-    data: () => ({
-        nombreUser: '',
-        emailUser: '',
-        telefonoUser: '',
-        mensajeUser: ''
-        }),
+    data() {
+        return {
+            contacto: {
+                nombreUser: '',
+                emailUser: '',
+                telefonoUser: '',
+                mensajeUser: ''
+            }
+        }
+    },
 
         methods: {
-
-        handleSubmitForm() {
-            let apiURL = "";
-                this.$refs.observer.validate()
+        submit() {
+            let apiURL = "https://backendhotel-backup.herokuapp.com/api/contacto/add";
 
         axios
             .post(apiURL, this.contacto)
             .then(() => {
-            this.$router.push("/add");
+            this.$router.push("/");
             this.contacto = {
                 nombreUser: "",
                 emailUser: "",

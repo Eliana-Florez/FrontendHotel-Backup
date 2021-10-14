@@ -11,7 +11,7 @@
             </v-row>
 
             <v-row justify="center" class="mx-15 my-8  d-flex px-10  py-6">
-                <v-form v-model="valid">
+                <form >
                     <v-container bg fill-height>
                     <v-row class=" d-flex">
                         <v-col class="mr-8">
@@ -28,6 +28,27 @@
                             v-model="lastName"
                             :rules="lastNameRules"
                             label="Apellidos"
+                            required
+                            solo
+                        ></v-text-field>
+                        </v-col>
+                    </v-row>
+
+                    <v-row class=" d-flex">
+                        <v-col class="mr-8">
+                        <v-text-field
+                            v-model="names"
+                            :rules="nameRules"
+                            label="Documento de identidad"
+                            required
+                            solo
+                        ></v-text-field>
+                        </v-col>
+                        <v-col>
+                        <v-text-field
+                            v-model="lastName"
+                            :rules="lastNameRules"
+                            label="Ciudad de Origen"
                             required
                             solo
                         ></v-text-field>
@@ -99,16 +120,15 @@
                         <v-btn @click="clear" class="mr-10 red darken-4 px-10 ">
                             <span class="white--text">Limpiar</span>
                         </v-btn>
-                        <v-btn
+                        <v-btn @click="submit"
                         class="mr-10  red darken-4 px-10 mb-4"
                         type="submit"
-                        :disabled="invalid"
                         >
-                            <span class="white--text">Reservar</span>
+                            <span class="white--text">Enviar</span>
                         </v-btn>
                     </v-row>
                     </v-container>
-                </v-form>
+                </form>
             </v-row>
         </v-sheet>
     </v-app>
@@ -118,24 +138,37 @@
 
 
 <script>
-
+import axios from "axios";
 export default {
-    data: () => ({
-        name: '',
-        phoneNumber: '',
-        email: '',
-        comments: '',
-        dates: ['2019-09-10', '2019-09-20'],
-    }),
-    computed: {
-        dateRangeText () {
-        return this.dates.join(' ~ ')
-        },
+    data() {
+        return {
+            contacto: {
+                nombreUser: '',
+                emailUser: '',
+                telefonoUser: '',
+                mensajeUser: ''
+            }
+        }
     },
 
         methods: {
-        submit () {
-            this.$refs.observer.validate()
+        submit() {
+            let apiURL = "https://backendhotel-backup.herokuapp.com/api/cliente/add";
+
+        axios
+            .post(apiURL, this.contacto)
+            .then(() => {
+            this.$router.push("/");
+            this.contacto = {
+                nombreUser: "",
+                emailUser: "",
+                telefonoUser: "",
+                mensajeUser: ""
+            };
+            })
+            .catch((error) => {
+            console.log(error);
+            });
         },
         clear () {
             this.names = ''

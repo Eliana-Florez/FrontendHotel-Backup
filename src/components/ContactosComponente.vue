@@ -22,7 +22,7 @@
                     <v-row class=" d-flex">
                         <v-text-field
                             v-model="contacto.nombreUser"
-                            :counter="10"
+                            :counter="30"
                             label="Nombres y Apellidos"
                             required
                         ></v-text-field>

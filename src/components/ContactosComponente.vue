@@ -54,14 +54,14 @@
                     </v-row>
 
                     <v-row justify="center" class="mt-10">
+                        <v-btn @click="clear" class="mr-10 red darken-4 px-10 ">
+                            <span class="white--text">Limpiar</span>
+                        </v-btn>
                         <v-btn @click="submit"
                         class="mr-10  red darken-4 px-10 mb-4"
                         type="submit"
                         >
                             <span class="white--text">Enviar</span>
-                        </v-btn>
-                        <v-btn @click="clear" class="mr-10 red darken-4 px-10 ">
-                            <span class="white--text">Limpiar</span>
                         </v-btn>
                     </v-row>
                     </v-container>

@@ -21,6 +21,7 @@
                         <v-col class="mr-12">
                         <v-text-field
                             v-model="reserva.nombresClient"
+                            class="form-control"
                             label="Nombres"
                             required
                             solo
@@ -29,6 +30,7 @@
                         <v-col>
                         <v-text-field
                             v-model="reserva.apellidosClient"
+                            class="form-control"
                             label="Apellidos"
                             required
                             solo
@@ -40,6 +42,7 @@
                         <v-col class="mr-12">
                         <v-text-field
                             v-model="reserva.cedulaClient"
+                            class="form-control"
                             label="Documento de identidad"
                             required
                             solo
@@ -48,6 +51,7 @@
                         <v-col>
                         <v-text-field
                             v-model="reserva.ciudadOrigenClient"
+                            class="form-control"
                             label="Ciudad de Origen"
                             required
                             solo
@@ -59,6 +63,7 @@
                         <v-col class="mr-12">
                         <v-text-field
                             v-model="reserva.telefonoClient"
+                            class="form-control"
                             label="Teléfono"
                             required
                             solo
@@ -67,6 +72,7 @@
                         <v-col>
                         <v-text-field
                             v-model="reserva.emailClient"
+                            class="form-control"
                             label="E-mail"
                             required
                             solo
@@ -83,6 +89,7 @@
                         <v-col class="mr-12">
                         <v-text-field
                             v-model="reserva.numPersonas"
+                            class="form-control"
                             label="Número de personas"
                             required
                             solo
@@ -91,10 +98,12 @@
                         <v-col>
                         <v-autocomplete
                             v-model="reserva.infoHabitacion"
+                            class="form-control"
                             :items="items"
                             small-chips
                             label="Habitaciones"
                             multiple
+                            required
                             solo
                         ></v-autocomplete>
                         </v-col>
@@ -118,6 +127,7 @@
                                 readonly
                                 v-bind="attrs"
                                 v-on="on"
+                                required
                                 solo
                             ></v-text-field>
                             </template>
@@ -161,6 +171,7 @@
                                 readonly
                                 v-bind="attrs"
                                 v-on="on"
+                                required
                                 solo
 
                             ></v-text-field>
@@ -239,23 +250,15 @@ export default {
 
         axios
             .post(apiURL, this.reserva)
-            .then(() => {
-            this.$router.push("/");
-            this.reserva =  {
-                nombresClient: "",
-                apellidosClient:  "",
-                cedulaClient: "",
-                ciudadOrigenClient: "",
-                telefonoClient: "",
-                emailClient: "",
-                numPersonas: "",
-                infoHabitacion: null,
-                fechaIngreso: "",
-                fechaSalida: ""
-            };
+            .then(response => {
+                alert("La reserva se realizo satisfactoriamente");
+                this.$router.push({
+                    name: "home"
+                });
             })
-            .catch((error) => {
-            console.log(error);
+            .catch(e => {
+            console.log(e);
+            this.errors.push(e);
             });
         },
         clear () {

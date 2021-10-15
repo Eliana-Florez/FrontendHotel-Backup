@@ -60,19 +60,19 @@
 
     <v-footer dark padless>
       <v-card class="flex" flat tile>
-        <v-card-title class="teal">
+        <v-card-title class="teal green darken-4">
           <strong class="subheading"
-            >Encuentranos tambien en nuestras redes sociales</strong
+            >Ingrese a las opciones de administrador</strong
           >
 
           <v-spacer></v-spacer>
 
           <v-col class="mx-1 my-auto ">
-          <v-btn color="green darken-3 white--text" elevation="5"
+          <v-btn color="red darken-4 white--text" elevation="5"
           @click="admin()"
           block large
           >
-          Administrador
+          Admin
           </v-btn>
         </v-col>
         </v-card-title>

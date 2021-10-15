@@ -67,18 +67,14 @@
 
           <v-spacer></v-spacer>
 
-          <v-btn
-            v-for="icon in icons"
-            :key="icon"
-            class="mx-4"
-            icon
-            dark
-            color="#B71C1C"
+          <v-col class="mx-1 my-auto ">
+          <v-btn color="green darken-3 white--text" elevation="5"
+          @click="admin()"
+          block large
           >
-            <v-icon size="24px" color="#B71C1C">
-              {{ icon }}
-            </v-icon>
+          Administrador
           </v-btn>
+        </v-col>
         </v-card-title>
 
         <v-card-text class="py-2 white--text text-center">
@@ -114,6 +110,10 @@ export default {
     contactenos() {
       console.log("ir al tarifas funcionando");
       this.$router.push("/contactoview");
+    },
+    admin() {
+      console.log("ir al admin funcionando");
+      this.$router.push("/adminview");
     },
   },
 };

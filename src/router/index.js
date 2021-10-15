@@ -5,6 +5,8 @@ import HabitacionesView from '../views/HabitacionesView.vue'
 import TarifasView from '../views/TarifasView.vue'
 import ReservasView from '../views/ReservasView.vue'
 import ContactoView from '../views/ContactoView.vue'
+import AdminView from '../views/AdminView.vue'
+import EditReservaView from '../views/EditReservaView.vue'
 
 
 Vue.use(VueRouter)
@@ -42,6 +44,16 @@ const routes = [
     path:'/contactoview',
     name:'ContactoView',
     component:ContactoView
+  },
+  {
+    path:'/adminview',
+    name:'AdminView',
+    component:AdminView
+  },
+  {
+    path:'/editreservaview/:id',
+    name:'EditReservaView',
+    component:EditReservaView
   }
 ]
 

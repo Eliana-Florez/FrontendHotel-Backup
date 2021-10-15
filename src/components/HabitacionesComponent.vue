@@ -1,10 +1,10 @@
 <template>
     <v-app>
-        <v-sheet  class="mx-16 my-12" 
-            color="white" 
-            rounded 
-            height="auto"
+        <v-sheet  class=" mx-16 my-12"
+            color="white"
             elevation="6"
+            rounded
+            height= auto
         >
             <v-row class=" red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6 ">
                 <v-img
@@ -16,88 +16,131 @@
                 ></v-img>
             </v-row>
 
-            <v-row justify="center" class="mx-auto my-auto  d-flex px-10  py-6">
-                <p>
-                    Contamos con 10 cómodas habitaciones, con arquitectura propia de nuestra zona cafetera, todas adornadas con cuadros del maestro "Abiezer" Agudelo, oriundo de nuestra región.
-                    <br><br>
-                    Distribuidas así:
-                    <br>
-                    - 3 de acomodación múltiple (hasta 5 personas máximo)
-                    <br>
-                    - 3 sencillas (hasta 2 personas máximo)
-                    <br>
-                    - 4 amplias (hasta 3 personas máximo)
-                    <br>
-                    <br>
-                    Adicional al hospedaje, ofrecemos a nuestros usuarios servicio de lavandería, transporte aeropuerto-hotel y hotel-aeropuerto, transporte en vehiculos para desplazamiento dentro del departamento, servicio de Café-Bar y servició de alimentación completa.
-                </p>
-<<<<<<< HEAD
-
-
-
-
-
-=======
-            </v-row>
->>>>>>> master
-
-            <v-row justify="center" class=" mx-auto my-10 d-flex">
-                <v-col  class=" blue-grey lighten-1 mr-1 ml-6">
-                <v-img
-                max-height="150"
-                max-width="auto"
-                align-star
-                contain
-                src="../assets/img/aroma03.jpg"
-                ></v-img>
+            <v-row justify="center" class=" mx-auto my-10  d-flex ">
+                <v-col  class="ml-15 mr-6">
+                    <v-img
+                    max-height="300"
+                    max-width="500"
+                    src="../assets/img/aroma03.jpg"
+                    ></v-img>
                 </v-col>
 
-                <v-col  class="mr-1 ml-10 my-auto text-justify">
-                    <span>Lorem ipsum dolor sit amet consectetur adipiscing elit primis
-                    massa ridiculus tristique, nisi eu ultrices ullamcorper ligula porta
-                    mauris aliq.</span>
+                <v-col  class="mr-15 ml-6 my-auto text-justify">
+                    <h3>Habitación Individual Deluxe</h3>
+                    <br>
+                    <i class="fa fa-bed" aria-hidden="true"></i><span>&nbsp; 1 cama individual</span>
+                    <br>
+                    <i class="fa fa-user" aria-hidden="true"></i><span>&nbsp;  Una persona</span>
+                    <br>
+                    <i class="fa fa-shower" aria-hidden="true"></i><span>&nbsp;  Baño en la habitación</span>
+                    <br>
+                    <i class="fa fa-wifi" aria-hidden="true"></i><span>&nbsp;  Wifi gratis</span>
+                    <br>
+                    <i class="fa fa-building" aria-hidden="true"></i><span>&nbsp;  Vista a la ciudad</span>
                 </v-col>
             </v-row>
 
-            <v-row justify="center" class=" mx-auto my-10 d-flex">
-                <v-col  class=" blue-grey lighten-1 mr-1 ml-6">
-                <v-img
-                max-height="150"
-                max-width="auto"
-                align-star
-                contain
-                src="../assets/img/aroma06.jpg"
-                ></v-img>
+            <v-row justify="center" class="  my-10 ml-15 mr-5 d-flex ">
+                <v-col  class="ml-15 mr-6 my-auto text-justify">
+                    <h3>Habitación Doble Estándar</h3>
+                    <br>
+                    <i class="fa fa-bed" aria-hidden="true"></i><span>&nbsp; 1 cama doble</span>
+                    <br>
+                    <i class="fa fa-users" aria-hidden="true"></i><span>&nbsp;  2 personas</span>
+                    <br>
+                    <i class="fa fa-shower" aria-hidden="true"></i><span>&nbsp;  Baño en la habitación</span>
+                    <br>
+                    <i class="fa fa-wifi" aria-hidden="true"></i><span>&nbsp;  Wifi gratis</span>
+                    <br>
+                    <i class="fa fa-building" aria-hidden="true"></i><span>&nbsp;  Vista a la ciudad</span>
                 </v-col>
 
-                <v-col  class="mr-1 ml-10 my-auto text-justify">
-                    <span>Lorem ipsum dolor sit amet consectetur adipiscing elit primis
-                    massa ridiculus tristique, nisi eu ultrices ullamcorper ligula porta
-                    mauris aliq.</span>
-                </v-col>
-            </v-row>
-
-            <v-row justify="center" class=" mx-auto my-10 d-flex">
-                <v-col  class=" blue-grey lighten-1 mr-1 ml-6">
-                <v-img
-                max-height="150"
-                max-width="auto"
-                align-star
-                contain
-                src="../assets/img/aroma09.jpg"
-                ></v-img>
-                </v-col>
-
-                <v-col  class="mr-1 ml-10 my-auto text-justify">
-                    <span>Lorem ipsum dolor sit amet consectetur adipiscing elit primis
-                    massa ridiculus tristique, nisi eu ultrices ullamcorper ligula porta
-                    mauris aliq.</span>
+                <v-col  class="mr-15 ml-6">
+                    <v-img
+                    max-height="300"
+                    max-width="500"
+                    src="../assets/img/aroma06.jpg"
+                    ></v-img>
                 </v-col>
             </v-row>
 
+            <v-row justify="center" class="mx-auto my-10  d-flex ">
+                <v-col  class="ml-15 mr-6">
+                    <v-img
+                    max-height="300"
+                    max-width="500"
+                    src="../assets/img/aroma09.jpg"
+                    ></v-img>
+                </v-col>
+
+                <v-col  class="mr-15 ml-6 my-auto text-justify">
+                    <h3>Habitación Doble con vista a las montañas</h3>
+                    <br>
+                    <i class="fa fa-bed" aria-hidden="true"></i><span>&nbsp; 2 camas individales</span>
+                    <br>
+                    <i class="fa fa-users" aria-hidden="true"></i><span>&nbsp;  2 personas</span>
+                    <br>
+                    <i class="fa fa-shower" aria-hidden="true"></i><span>&nbsp;  Baño en la habitación</span>
+                    <br>
+                    <i class="fa fa-wifi" aria-hidden="true"></i><span>&nbsp;  Wifi gratis</span>
+                    <br>
+                    <i class="fa fa-tree" aria-hidden="true"></i><span>&nbsp;  Vista a las montañas</span>
+                </v-col>
+            </v-row>
+
+        <v-row justify="center" class=" ml-15 mr-5 my-10  d-flex ">
+                <v-col  class="ml-15 mr-6 my-auto text-justify">
+                    <h3>Habitación Triple Estándar</h3>
+                    <br>
+                    <i class="fa fa-bed" aria-hidden="true"></i><span>&nbsp; 1 cama individal y 1 cama doble</span>
+                    <br>
+                    <i class="fa fa-users" aria-hidden="true"></i><span>&nbsp;  3 personas</span>
+                    <br>
+                    <i class="fa fa-shower" aria-hidden="true"></i><span>&nbsp;  Baño en la habitación</span>
+                    <br>
+                    <i class="fa fa-wifi" aria-hidden="true"></i><span>&nbsp;  Wifi gratis</span>
+                    <br>
+                    <i class="fa fa-building" aria-hidden="true"></i><span>&nbsp;  Vista a la ciudad</span>
+                </v-col>
+
+                <v-col  class="mr-15 ml-6">
+                    <v-img
+                    max-height="300"
+                    max-width="500"
+                    src="../assets/img/aroma12.jpg"
+                    ></v-img>
+                </v-col>
+            </v-row>
+
+            <v-row justify="center" class="mx-auto my-10  d-flex ">
+                <v-col  class="ml-15 mr-6">
+                    <v-img
+                    max-height="300"
+                    max-width="500"
+                    src="../assets/img/aroma03.jpg"
+                    ></v-img>
+                </v-col>
+
+                <v-col  class="mr-15 ml-6 my-auto text-justify">
+                    <h3>Habitación Cuadruple</h3>
+                    <br>
+                    <i class="fa fa-bed" aria-hidden="true"></i><span>&nbsp; 2 camas individales y 1 cama doble</span>
+                    <br>
+                    <i class="fa fa-users" aria-hidden="true"></i><span>&nbsp;  4 personas</span>
+                    <br>
+                    <i class="fa fa-shower" aria-hidden="true"></i><span>&nbsp;  Baño en la habitación</span>
+                    <br>
+                    <i class="fa fa-wifi" aria-hidden="true"></i><span>&nbsp;  Wifi gratis</span>
+                    <br>
+                    <i class="fa fa-cogs" aria-hidden="true"></i><span>&nbsp;  Vista al jardín</span>
+                </v-col>
+            </v-row>
         </v-sheet>
     </v-app>
 </template>
+
+
+
 
 <script>
 export default {

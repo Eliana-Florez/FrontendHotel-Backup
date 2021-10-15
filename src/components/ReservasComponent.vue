@@ -7,7 +7,13 @@
             height= auto
         >
             <v-row class=" red darken-4 mx-auto my-auto rounded-t-lg d-flex px-10 py-6 ">
-                <h2 class="white--text">Reserve con nosotros</h2>
+                <v-img
+                max-height="44"
+                max-width="auto"
+                align-end
+                contain
+                src="../assets/img/reserve-b.png"
+                ></v-img> 
             </v-row>
 
             <v-row justify="center" class="mx-15 my-6  d-flex px-10  py-6">
